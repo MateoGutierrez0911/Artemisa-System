@@ -20,20 +20,18 @@ import javax.persistence.Table;
 public class Alquileres {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique = true, nullable = false)
     private int idAlquiler;
-    @Column
+    @Column(nullable = false)
     private Date fechaAlquiler;
-    @Column
+    @Column(nullable = false)
     private int valorTotal;
-    @Column
+    @Column(nullable = false)
     private Date created_at;
-    @Column
+    @Column(nullable = false)
     private Date updated_at;
     @ManyToOne
-    @JoinColumn(
-            name = "idUsuario",
-            referencedColumnName = "idUsuario"
-    )
+    @JoinColumn(name = "idUsuario", nullable = false)
     private Usuarios usuario;
 
     public int getIdAlquiler() {

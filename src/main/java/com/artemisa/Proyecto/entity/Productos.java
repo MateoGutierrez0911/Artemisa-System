@@ -19,29 +19,26 @@ import javax.persistence.Table;
 @Setter
 public class Productos {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique = true, nullable = false)
     private int idProducto;
-    @Column
+    @Column(nullable = false)
     private String codProducto;
-    @Column
+    @Column(nullable = false)
     private String nombreProducto;
-    @Column
+    @Column(nullable = false)
     private int stockProducto;
-    @Column
+    @Column(nullable = false)
     private String genero;
-    @Column
+    @Column(nullable = false)
     private String estadoProducto;
-    @Column
+    @Column(nullable = false)
     private Date created_at;
-    @Column
+    @Column(nullable = false)
     private Date updated_at;
     @ManyToOne
     @JoinColumn(
-            name = "idCategoriaProducto",
-            referencedColumnName = "idCategoriaProducto"
-    )
+            name = "idCategoriaProducto", nullable = false    )
     private Categorias categoriaProducto;
 
     public int getIdProducto() {

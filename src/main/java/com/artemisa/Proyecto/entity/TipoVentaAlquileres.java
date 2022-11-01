@@ -16,11 +16,10 @@ import javax.persistence.Table;
 @Setter
 public class TipoVentaAlquileres {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique = true,nullable = false)
     private int idTipoVentaAlquiler;
-    @Column
+    @Column(nullable = false)
     private String descTipo;
 
     public int getIdTipoVentaAlquiler() {

@@ -22,30 +22,28 @@ public class Usuarios {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(unique = true, nullable = false)
     private int idUsuario;
-    @Column
+    @Column(nullable = false)
     private String docUsuario;
-    @Column
+    @Column(nullable = false)
     private String nombreUsuario;
-    @Column
+    @Column(nullable = false)
     private String emailUsuario;
-    @Column
+    @Column(nullable = false)
     private String Contraseña;
-    @Column
+    @Column(nullable = false)
     private String estadoUsuario;
-    @Column
+    @Column(nullable = false)
     private Date created_at;
-    @Column
+    @Column(nullable = false)
     private Date updated_at;
     @ManyToOne
     @JoinColumn(
-            name = "idRol",
-            referencedColumnName = "idRol"
+            name = "idRol", nullable = false
     )
     private Rol rol;
     @ManyToOne
     @JoinColumn(
-            name = "idDoc",
-            referencedColumnName = "idDoc"
+            name = "idDoc", nullable = false
     )
     private Tipo_doc tipo_Doc;
 

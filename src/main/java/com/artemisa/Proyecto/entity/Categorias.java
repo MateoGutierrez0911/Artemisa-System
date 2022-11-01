@@ -16,12 +16,11 @@ import javax.persistence.Table;
 @Setter
 public class Categorias {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique = true, nullable = false)
     private int idCategoriaProducto;
     @Column(
-            name = "categoriaProducto"
+            name = "categoriaProducto", nullable = false
     )
     private String categoriaProducto;
 

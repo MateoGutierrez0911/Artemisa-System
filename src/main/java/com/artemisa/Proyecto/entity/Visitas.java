@@ -19,34 +19,30 @@ import javax.persistence.Table;
 @Setter
 public class Visitas {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique = true, nullable = false)
     private int idVisita;
-    @Column
+    @Column(nullable = false)
     private Date fechaVisita;
-    @Column
+    @Column(nullable = false)
     private String estadoVisita;
-    @Column
+    @Column(nullable = false)
     private Date created_at;
-    @Column
+    @Column(nullable = false)
     private Date updated_at;
     @ManyToOne
     @JoinColumn(
-            name = "idUsuario",
-            referencedColumnName = "idUsuario"
+            name = "idUsuario", nullable = false
     )
     private Usuarios usuario;
     @ManyToOne
     @JoinColumn(
-            name = "idProducto",
-            referencedColumnName = "idProducto"
+            name = "idProducto", nullable = false
     )
     private Productos producto;
     @ManyToOne
     @JoinColumn(
-            name = "idTipoVentaAlquiler",
-            referencedColumnName = "idTipoVentaAlquiler"
+            name = "idTipoVentaAlquiler", nullable = false
     )
     private TipoVentaAlquileres tipoVentaAlquiler;
 

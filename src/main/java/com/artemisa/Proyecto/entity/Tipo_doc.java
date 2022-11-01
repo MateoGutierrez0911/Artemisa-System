@@ -16,11 +16,10 @@ import javax.persistence.Table;
 @Setter
 public class Tipo_doc {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique = true,nullable = false)
     private int idDoc;
-    @Column
+    @Column(nullable = false)
     private String tipoDoc;
 
     public int getIdDoc() {

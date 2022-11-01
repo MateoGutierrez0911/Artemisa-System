@@ -16,12 +16,11 @@ import javax.persistence.Table;
 @Setter
 public class Rol {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique = true,nullable = false)
     private int idRol;
     @Column(
-            name = "nombreRol"
+            name = "nombreRol", nullable = false
     )
     private String name;
 

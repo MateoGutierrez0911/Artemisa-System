@@ -19,29 +19,25 @@ import javax.persistence.Table;
 @Setter
 public class DetalleAlquileres {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(unique = true, nullable = false)
     private int iddetalle_Alquiler;
-    @Column
+    @Column(nullable = false)
     private int valorAlquiler;
-    @Column
+    @Column(nullable = false)
     private int iva;
-    @Column
+    @Column(nullable = false)
     private Date created_at;
-    @Column
+    @Column(nullable = false)
     private Date updated_at;
     @ManyToOne
     @JoinColumn(
-            name = "idAlquiler",
-            referencedColumnName = "idAlquiler"
+            name = "idAlquiler", nullable = false
     )
     private Alquileres alquiler;
     @ManyToOne
     @JoinColumn(
-            name = "idProducto",
-            referencedColumnName = "idProducto"
-    )
+            name = "idProducto",nullable = false    )
     private Productos producto;
 
     public int getIddetalle_Alquiler() {

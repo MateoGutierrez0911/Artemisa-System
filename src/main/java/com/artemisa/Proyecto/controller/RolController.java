@@ -1,23 +1,23 @@
-package controller;
+package com.artemisa.Proyecto.controller;
 
-import com.artemisa.Proyecto.entity.Usuarios;
+import com.artemisa.Proyecto.entity.Rol;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.UsuariosService;
+import com.artemisa.Proyecto.service.RolService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("api")
-public class UsuariosController {
+public class RolController {
 
     @Autowired
-    private UsuariosService usuariosService;
+    public RolService rolService;
 
-    @GetMapping("Usuarios")
-    public List<Usuarios> GetUsuarios(){
-        return usuariosService.getUsuarios();
+    @GetMapping("/Roles")
+    public List<Rol> GetRol(){
+        return rolService.getRols();
     }
 }

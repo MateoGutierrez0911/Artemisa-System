@@ -1,9 +1,9 @@
-package service;
+package com.artemisa.Proyecto.service;
 
 import com.artemisa.Proyecto.entity.Ventas;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.IVentasRepository;
+import com.artemisa.Proyecto.repository.IVentasRepository;
 
 import java.util.List;
 

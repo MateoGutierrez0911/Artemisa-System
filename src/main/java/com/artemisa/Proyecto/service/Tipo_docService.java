@@ -1,9 +1,9 @@
-package service;
+package com.artemisa.Proyecto.service;
 
 import com.artemisa.Proyecto.entity.Tipo_doc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.ITipo_docRepository;
+import com.artemisa.Proyecto.repository.ITipo_docRepository;
 
 import java.util.List;
 

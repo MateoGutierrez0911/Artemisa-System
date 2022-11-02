@@ -1,9 +1,9 @@
-package service;
+package com.artemisa.Proyecto.service;
 
 import com.artemisa.Proyecto.entity.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.IUsuariosRepository;
+import com.artemisa.Proyecto.repository.IUsuariosRepository;
 
 import java.util.List;
 

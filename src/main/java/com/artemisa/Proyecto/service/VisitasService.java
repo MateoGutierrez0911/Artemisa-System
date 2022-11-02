@@ -1,9 +1,9 @@
-package service;
+package com.artemisa.Proyecto.service;
 
 import com.artemisa.Proyecto.entity.Visitas;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.IVisitasRepository;
+import com.artemisa.Proyecto.repository.IVisitasRepository;
 
 import java.util.List;
 

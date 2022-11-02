@@ -1,4 +1,4 @@
-package repository;
+package com.artemisa.Proyecto.repository;
 
 import com.artemisa.Proyecto.entity.Ventas;
 import org.springframework.data.jpa.repository.JpaRepository;

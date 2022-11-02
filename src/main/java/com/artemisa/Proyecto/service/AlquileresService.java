@@ -1,9 +1,9 @@
-package service;
+package com.artemisa.Proyecto.service;
 
 import com.artemisa.Proyecto.entity.Alquileres;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.IAlquilerRepository;
+import com.artemisa.Proyecto.repository.IAlquilerRepository;
 
 import java.util.List;
 

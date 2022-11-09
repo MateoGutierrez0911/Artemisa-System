@@ -1,5 +1,6 @@
 package com.artemisa.Proyecto.service;
 
+import com.artemisa.Proyecto.entity.Alquileres;
 import com.artemisa.Proyecto.entity.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,5 +16,21 @@ public class UsuariosService {
 
     public List<Usuarios> getUsuarios(){
         return iUsuariosRepository.findAll();
+    }
+
+    public Usuarios saveUsuarios(Usuarios usuarios) {
+        return iUsuariosRepository.save(usuarios);
+    }
+
+    public Usuarios getUsuarios(int id){
+        return iUsuariosRepository.findById(id).get();
+    }
+
+    public Usuarios updateUsuarios(Usuarios usuarios) {
+        return iUsuariosRepository.save(usuarios);
+    }
+
+    public void deleteUsuarios(int id){
+        iUsuariosRepository.deleteById(id);
     }
 }

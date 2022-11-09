@@ -16,4 +16,20 @@ public class AlquileresService {
     public List<Alquileres> getAlquileres(){
         return iAlquilerRepository.findAll();
     }
+
+    public Alquileres saveAlquiler(Alquileres alquileres) {
+        return iAlquilerRepository.save(alquileres);
+    }
+
+    public Alquileres getAlquiler(int id){
+        return iAlquilerRepository.findById(id).get();
+    }
+
+    public Alquileres updateAlquileres(Alquileres alquileres) {
+        return iAlquilerRepository.save(alquileres);
+    }
+
+    public void deleteAlquiler(int id){
+        iAlquilerRepository.deleteById(id);
+    }
 }

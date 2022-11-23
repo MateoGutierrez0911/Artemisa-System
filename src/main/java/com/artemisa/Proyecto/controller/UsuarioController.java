@@ -1,24 +1,23 @@
 package com.artemisa.Proyecto.controller;
 
-import com.artemisa.Proyecto.entity.Tipo_doc;
+import com.artemisa.Proyecto.entity.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.artemisa.Proyecto.service.Tipo_docService;
+import com.artemisa.Proyecto.service.UsuariosService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("api")
-public class Tipo_docController {
-
+public class UsuarioController {
 
     @Autowired
-    public Tipo_docService tipo_docService;
+    private UsuariosService usuariosService;
 
-    @GetMapping("/TipoDoc")
-    public List<Tipo_doc> GetTipoDoc(){
-        return tipo_docService.getTipoDoc();
+    @GetMapping("Usuarios")
+    public List<Usuarios> GetUsuarios(){
+        return usuariosService.getUsuarios();
     }
 }
